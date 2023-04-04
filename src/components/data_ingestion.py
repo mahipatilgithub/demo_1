@@ -25,7 +25,7 @@ class DataIngestion:
     def iniatiate_data_ingestion(self):
         logging.info("Data Ingestion Started!!")
         try:
-            df = pd.read_csv('F:/class/ML/notebook/data/stud.csv')
+            df = pd.read_csv("D:\Mahi\Practice\projects_structure\demo_1\stud.csv")
             logging.info("read the dataset as dataframe")
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok = True)
             df.to_csv(self.ingestion_config.raw_data_path,index=False,header=True)
